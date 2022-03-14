@@ -1,0 +1,133 @@
+<app-navbar></app-navbar>
+<div class="bg-contain bg-center bg-no-repeat" id="bannerimage"></div>
+<p-card class="flex justify-content-center" [style]="{'width': '75rem', 'margin-bottom': '2em','top-margin':'16em'}">
+  <div id="fullsection">
+    <div  id="section">
+      <h2>Application form</h2>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <p-divider align="left">
+        <div class="inline-flex align-items-center">
+          <b>Personal Info</b>
+        </div>
+      </p-divider>
+      <br>
+      <form [formGroup]="applicationForm"  (ngSubmit)="onSubmit()">
+        <div class="form-group ">
+          <label for="position">Position</label>
+          <input type="text" id="position" class="form-control space" formControlName="position" placeholder="Enter position">
+          <span *ngIf="applicationForm.get('position')?.invalid && applicationForm.get('position')?.touched"
+             class="help-block">enter a valid position</span>
+        </div>
+        <div class="formgrid grid">
+          <div class="field col">
+            <div class="form-group ">
+              <label for="firstname">First Name</label>
+              <input type="text" id="username" class="form-control" formControlName="firstname" placeholder="Enter First Name">
+              <span *ngIf="applicationForm.get('firstname')?.invalid && applicationForm.get('firstname')?.touched"
+              class="help-block">enter first name</span>
+            </div>
+          </div>
+          <div class="field col">
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="text" id="username" class="form-control" formControlName="lastname" placeholder="Enter Last Name">
+              <span *ngIf="applicationForm.get('lastname')?.invalid && applicationForm.get('lastname')?.touched"
+              class="help-block">enter last name</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Mail</label>
+          <input type="email" id="email" class="form-control space" formControlName="email" placeholder="Enter Email">
+          <span class="help-block " *ngIf="applicationForm.get('email')?.invalid && applicationForm.get('email')?.touched">enter a valid email</span>
+        </div>
+        <div class="formgrid grid">
+          <div class="field col">
+            <div class="form-group">
+              <label for="mobile">Mobile Number</label>
+              <input type="text" id="mobile" class="form-control space" formControlName="mobile" placeholder="Enter Mobile Number">
+              <span class="help-block " *ngIf="applicationForm.get('mobile')?.invalid && applicationForm.get('mobile')?.touched">enter a valid number</span>
+            </div>
+          </div>
+          <div class="field col">
+            <div class="form-group">
+              <label for="Alternatemobile">Alternate Mobile Number</label>
+              <input type="text" id="mobile" class="form-control" formControlName="alternateMobile" placeholder="Enter Alternate Mobile Number">
+              <span class="help-block " *ngIf="applicationForm.get('alternateMobile')?.invalid && applicationForm.get('alternateMobile')?.touched">enter a valid number</span>
+            </div>
+          </div>
+        </div> 
+         <div class="field grid form-group">
+          <div class="col">
+            <label for="dob">Date Of Birth &nbsp; &nbsp;</label>
+            <p-calendar formControlName="dateOfBirth" [showIcon]="true" inputId="icon" placeholder="mm/dd/yyyy"></p-calendar>       
+          </div>
+        </div> 
+  
+        <div class="formgroup-inline">
+          <label for="gender"> Gender : &nbsp;</label>
+          <div class="field-radiobutton" *ngFor="let gen of gender" id="gender">
+            <input type="radio" class="radio" formControlName="gender" [value]="gen">
+            {{gen}} 
+          </div>
+        </div> 
+     
+   <div formGroupName="permanentAdd">
+    <div class="form-group">
+      <label for="permanent Address">Permanent Address</label>
+      <div class="formgrid grid ">
+        <div class="field col">
+          <input type="text"id="pAddressLine1" class="form-control" formControlName="line1" placeholder="Address Line 1">
+        </div>
+        <div class="field col">
+          <input type="text" id="pAddressLine2" class="form-control" formControlName="line2" placeholder="Address Line 2">
+        </div>
+      </div>
+        <div class="formgrid grid ">
+          <div class="field col">
+            <input type="text" id="pCity" class="form-control" formControlName="city" placeholder=" City">
+          </div>
+          <div class="field col">         
+            <input type="text"  class="form-control" formControlName="state" placeholder="State">
+          </div>
+        </div>
+ 
+  </div>
+  </div>
+    <br>
+
+        <p-divider align="left">
+          <div class="inline-flex align-items-center">
+            <b>Professional Details</b>
+          </div>
+        </p-divider>
+        <br>
+  
+        <div class="form-group ">
+          <label for="employment">Current employment status</label>
+          <input type="text" id="position" class="form-control space" formControlName="currentEmploymentStatus" >
+        </div>
+  
+        <div class=" form-group field">
+          <label for="projectlink">Project Link</label>
+          <input type="text" id="projectlink" class="form-control" formControlName="projectlink">
+        </div>
+        <div class=" form-group field p-fluid">
+          <label for="skills">Skills</label>
+          <!-- <p-chips  formcontrolName="skills" separator=","></p-chips>  -->
+          <p-chips formcontrolName="skills"></p-chips>
+        </div>
+        <div>
+          <p-button type="submit" [disabled]="!applicationForm.valid" >save</p-button>
+       
+        </div>
+      
+      
+  
+      </form>
+    </div>
+  
+  </div>
+</p-card>

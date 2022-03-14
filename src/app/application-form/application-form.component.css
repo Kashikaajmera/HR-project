@@ -1,0 +1,37 @@
+h2{
+    text-align: center;
+}
+#bannerimage {
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/9f/6b/33/9f6b332cf88d5f7abe922acf82befc59.jpg);
+    height: 395px;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+  }
+  #section{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;
+      }
+      span{
+        color: red;
+      }
+label{
+  margin-bottom: 10px;
+}
+/* input{
+  margin-bottom: 15px;
+} */
+ p-chips.ng-invalid.ng-touched{
+  border: 1px solid red;
+ }
+.space{
+  margin-bottom: 15px;
+} 
+.radio{
+  margin-top:3px ;
+}

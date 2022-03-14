@@ -1,0 +1,23 @@
+#bannerimage {
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/9f/6b/33/9f6b332cf88d5f7abe922acf82befc59.jpg);
+    height: 395px;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+  }
+  h1{
+    text-align: center;
+}
+h2{
+  text-align: center;
+  color: rgb(48, 47, 47);
+}
+
+
+p-card img{
+    max-height: 200px;
+    max-width: 200px;
+}
+/* p-card{
+  border: solid 2px black;
+} */

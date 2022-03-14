@@ -1,0 +1,28 @@
+/* #banner img{
+    background-size: cover;
+} */
+#bannerimage {
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/9f/6b/33/9f6b332cf88d5f7abe922acf82befc59.jpg);
+    height: 395px;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+  }
+
+  #card{
+      justify-content: center;
+      align-items: center;
+  }
+  /* p-card{
+     
+      width: 240px;
+  
+  } */
+  /* p-card:hover{
+    border: black solid 2px;
+    border-radius: 14px;
+     
+  } */
+  /* nav{
+      height: 100px;
+  } */

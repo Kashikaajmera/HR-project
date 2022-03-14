@@ -1,0 +1,27 @@
+
+ <app-navbar></app-navbar>
+ <div class="bg-contain bg-center bg-no-repeat" id="bannerimage"></div>
+ <br>
+ <br>
+ <h1>Current Opening</h1>
+ <h2>Lorem ipsum dolor sit.</h2>
+ <br>
+ <!-- <div class="card">
+   <div class="flex flex-row flex-wrap justify-content-center">
+    <app-job-list *ngFor="let jobl of Job; "
+    [jobs]="jobl"></app-job-list>
+   </div>
+ </div> -->
+ <div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2  flex flex-row flex-wrap justify-content-center">
+      <app-job-list *ngFor="let jobl of Jobs; let i =index"
+    [job]="jobl"  [index]="i"></app-job-list>
+    </div>
+  </div>
+ </div>
+
+
+
+
+ 

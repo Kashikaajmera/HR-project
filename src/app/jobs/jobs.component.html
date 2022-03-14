@@ -1,0 +1,36 @@
+
+  <app-navbar></app-navbar>
+ <!-- <div class="banner" >
+     <img src="http://www.anrsoftware.com/wp-content/uploads/2015/07/banner-bg-blur.jpg" alt="banner"  style="max-width: 120%;">
+ </div> -->
+ 
+ <div class="bg-contain bg-center bg-no-repeat" id="bannerimage"></div>
+ <div class="flex flex-row " id="card">
+  
+    <p-card header="Fresher" subheader="Card Subheader" styleClass="p-card-shadow" >
+        <ng-template pTemplate="header">
+            <img alt="Card" src="https://cdn5.f-cdn.com/contestentries/375363/15771315/56f56a906cfcf_thumb900.jpg" style="max-width: 236px; max-height: 280px;">
+        </ng-template>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        <ng-template pTemplate="footer">
+            <!-- <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button> -->
+            <button pButton type="button"  (click)="onApplying()" class="p-button-text" >apply now</button>
+        </ng-template>
+    </p-card>
+    &nbsp;&nbsp;
+    <p-card header="experts" subheader="Card Subheader"  styleClass="p-card-shadow" >
+        <ng-template pTemplate="header">
+            <img alt="Card" src="https://static.thenounproject.com/png/2439432-200.png"  style="max-width: 236px; max-height: 280px;">
+        </ng-template>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        <ng-template pTemplate="footer">
+            <!-- <p-button label="opening" icon="pi pi-check"></p-button> -->
+            <button pButton type="button" class="p-button-text" (click)="onJobOpening()">opening</button>
+            
+        </ng-template>
+    </p-card>
+ 
+   
+ </div> 
+ 
